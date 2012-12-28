@@ -3,19 +3,19 @@
 #include "../header/deck.h"
 
 DECK* createDeck(){
-	DECK *deck = malloc(sizeof(DECK));
-	return deck;
+    DECK *deck = malloc(sizeof(DECK));
+    return deck;
 }
 
 void initDeck(DECK* deck){
-		
+    
 }
 
 void deleDeck(DECK* deck){
-
+    
 }
 
 DECK* loadDeck(DECK* deck){ 
-
+    
 }
 
