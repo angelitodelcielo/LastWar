@@ -4,8 +4,8 @@
 #include "player.c"
 #include "card.c"
 #include "deck.c"
-#include </usr/include/mysql/my_global.h>
-#include </usr/include/mysql/mysql.h>
+#include "/usr/include/mysql/my_global.h"
+#include "/usr/include/mysql/mysql.h"
 
 int main(){
 
@@ -14,7 +14,7 @@ int main(){
 Init Game
 #######################
 */
-  int conf = 0;
+  char conf = '0';
   char name[100];
 
   printf("\nWelcome to the Last War Game\n");
@@ -22,12 +22,14 @@ Init Game
 
   do{
     printf("Configurer comme :\n");
-    printf("1. Client\n");
-    printf("2. Server\n\n");
+    printf("[1]. Client\n");
+    printf("[2]. Server\n\n");
     
-    scanf(" %d",&conf);
+    scanf(" %c",&conf);
+    fflush(stdin);
    
-  }while(conf!=1&&conf!=2);
+  }while(!strcmp(conf,'1') &&
+          strcmp(conf,'2');
 
 
 /*
