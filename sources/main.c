@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "player.c"
 #include "card.c"
+#include "cardline.c"
 #include "deck.c"
 #include "library.c"
+#include "mysql.c"
+#include "node.c"
+#include "player.c"
 #include "/usr/include/mysql/my_global.h"
 #include "/usr/include/mysql/mysql.h"
 
+#define BUFFER_SIZE 80
 #define LOCAL '1'
 #define LAN   '2'
 #define AIDE  '3'
