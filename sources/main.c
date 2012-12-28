@@ -4,8 +4,13 @@
 #include "player.c"
 #include "card.c"
 #include "deck.c"
+#include "library.c"
 #include "/usr/include/mysql/my_global.h"
 #include "/usr/include/mysql/mysql.h"
+
+#define LOCAL '1'
+#define LAN   '2'
+#define AIDE  '3'
 
 int main(){
 
@@ -14,35 +19,33 @@ int main(){
 Init Game
 #######################
 */
-  char conf = '0';
-  char name[100];
+    char conf = '0';
 
-  printf("\nWelcome to the Last War Game\n");
-  printf("------------------------------\n\n");
-
-  do{
-    printf("Configurer comme :\n");
-    printf("[1]. Client\n");
-    printf("[2]. Server\n\n");
+    char menu = displayMenu();
     
-    scanf(" %c",&conf);
-    fflush(stdin);
-   
-  }while(conf!='1' &&
-         conf!='2');
+    if(menu == LAN){
+
+        do{
+            printf("Configurer comme :\n");
+            printf("[1]. Client\n");
+            printf("[2]. Server\n\n");
+
+            scanf(" %c",&conf);
+            fflush(stdin);
+
+        }while(conf!='1' &&
+               conf!='2');
+        
+        initPlayer();
+    }    
+    else if(menu == LOCAL){
+
+        initPlayer();    
+    }
 
 
-/*
-#######################
-Creation du joueur
-#######################
-*/
-
- printf("\nChoissisez votre nom:\n");
- scanf(" %s", &name);
- PLAYER* player = createPlayer(name);
- printf("you're name's:");
- printPlayer(player);
+ printf("\n\n");
+ printf("Les joueurs ont ete crées");
  printf("\n\n");
   
  return 0;
