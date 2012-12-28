@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "player.h"
+#include "../header/player.h"
  
 PLAYER* createPlayer(char *name){
 	PLAYER* player = malloc(sizeof(PLAYER));

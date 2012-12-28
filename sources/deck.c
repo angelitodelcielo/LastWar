@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "deck.h"
+#include "../header/deck.h"
 
 DECK* createDeck(){
 	DECK *deck = malloc(sizeof(DECK));

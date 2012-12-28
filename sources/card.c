@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "card.h"
+#include "../header/card.h"
 
 typedef struct card{
 	char *name;
