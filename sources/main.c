@@ -28,8 +28,8 @@ Init Game
     scanf(" %c",&conf);
     fflush(stdin);
    
-  }while(!strcmp(conf,'1') &&
-          strcmp(conf,'2');
+  }while(conf!='1' &&
+         conf!='2');
 
 
 /*
