@@ -13,9 +13,6 @@
 #include "mysql.c"
 #include "node.c"
 #include "player.c"
-#include "/usr/include/mysql/my_global.h"
-#include "/usr/include/mysql/mysql.h"
-
 
 int main(){
 
