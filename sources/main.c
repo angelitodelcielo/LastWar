@@ -13,6 +13,10 @@
 #include "mysql.c"
 #include "node.c"
 #include "player.c"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 939d81a73de3398889f88d4318dc511a8347945b
 
 int main(){
 

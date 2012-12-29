@@ -1,3 +1,4 @@
+#include "/usr/include/mysql/my_global.h"
 #include "/usr/include/mysql/mysql.h"
 
 void mysql_connect(){
