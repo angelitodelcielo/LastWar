@@ -4,4 +4,4 @@ typedef struct node
     struct node *next;
 }NODE;
 
-NODE* (createNode (CARD *card, NODE *next);
+NODE* (createNode (CARD *card, NODE *next));
