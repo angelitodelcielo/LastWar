@@ -1,7 +1,8 @@
 #define BUFFER_SIZE 80
 #define LOCAL '1'
 #define LAN   '2'
-#define AIDE  '3'
+#define HELP  '3'
+#define EXIT  '4'
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,39 +17,42 @@
 
 int main(){
 
-/*
+    /*
 #######################
 Init Game
 #######################
 */
-    char conf = '0';
+    char menu = '0'; 
+    do{
+        char conf = '0';
 
-    char menu = displayMenu();
-    
-    if(menu == LAN){
+        menu = displayMenu();
 
-        do{
-            printf("Configurer comme :\n");
-            printf("[1]. Client\n");
-            printf("[2]. Server\n\n");
+        if(menu == LAN){
 
-            scanf(" %c",&conf);
-            fflush(stdin);
+            do{
+                printf("Configurer comme :\n");
+                printf("[1]. Client\n");
+                printf("[2]. Server\n\n");
 
-        }while(conf!='1' &&
-               conf!='2');
-        
-        initPlayer();
-    }    
-    else if(menu == LOCAL){
+                scanf(" %c",&conf);
+                fflush(stdin);
 
-        initPlayer();    
-    }
+            }while(conf!='1' &&
+                    conf!='2');
+
+            initPlayer();
+        }    
+        else if(menu == LOCAL){
+
+            initPlayer();    
+        }
 
 
- printf("\n\n");
- printf("Les joueurs ont ete crées");
- printf("\n\n");
-  
- return 0;
+        printf("\n\n");
+        printf("Les joueurs ont ete crées");
+        printf("\n\n");
+    }while(menu!=EXIT);
+
+    return 0;
 }
