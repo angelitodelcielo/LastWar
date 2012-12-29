@@ -8,8 +8,9 @@ typedef struct card{
     int attack;
 }CARD;
 
+#include "cardlist.h"
+
 CARD* getCard (CARDLIST *cardlist, int i);
 CARD* removeCard (CARDLIST *cardlist, int i);
-void printCardList (CARDLIST* cardlist);
 
 #endif

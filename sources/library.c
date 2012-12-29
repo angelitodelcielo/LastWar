@@ -67,7 +67,3 @@ int readInt (FILE* file){
     fgets (buffer, BUFFER_SIZE, file);
     return atoi (buffer);
 }
-
-int main(){
-    return 0;
-}

@@ -7,6 +7,8 @@ typedef struct node
     struct node *next;
 }NODE;
 
+#include "card.h"
+
 NODE* (createNode (CARD *card, NODE *next));
 
 #endif
