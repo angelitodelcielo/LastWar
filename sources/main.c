@@ -31,7 +31,7 @@ Init Game
         if(menu == LAN){
 
             do{
-                printf("Configurer comme :\n");
+                printf("Game mode:\n");
                 printf("[1]. Client\n");
                 printf("[2]. Server\n\n");
 
@@ -39,7 +39,7 @@ Init Game
                 fflush(stdin);
 
             }while(conf!='1' &&
-                    conf!='2');
+                   conf!='2');
 
             initPlayer();
         }    
@@ -49,8 +49,8 @@ Init Game
         }
 
 
-        printf("\n\n");
-        printf("Les joueurs ont ete crées");
+        printf("\n");
+        printf("Players were created");
         printf("\n\n");
     }while(menu!=EXIT);
 

@@ -1,17 +1,19 @@
 char displayMenu(){
-    char response = '0';
+    char answer = '0';
     do{
         printf("\nWelcome to the Last War Game\n"); 
         printf("------------------------------\n\n");
         printf("[1]. LOCAL\n");
         printf("[2]. LAN\n");
-        printf("[3]. HELP\n\n");
-        printf("Reponse:");
-        scanf(" %c",&response);
+        printf("[3]. HELP\n");
+        printf("[4]. EXIT\n\n");
+        printf("Answer:");
+        scanf(" %c",&answer);
         printf("\n\n");
-    }while(response!='1' && 
-           response!='2' && 
-           response!='3');
+    }while(answer!='1' && 
+           answer!='2' && 
+           answer!='3' &&
+           answer!='4');
 }
 
 void initPlayer(){
@@ -19,12 +21,12 @@ void initPlayer(){
     char name[100];
     int i;
 
-    printf("Combien de joueur?: ");
+    printf("How many players: ");
     scanf(" %d",&nbplayer);
     printf("\n\n");    
 
     for(i=1;i<nbplayer+1;i++){
-        printf("\nNom du %d joueur:\n",i); 
+        printf("\nName of player %d:\n",i); 
         scanf(" %s", &name);
         /*PLAYER* player2 = createPlayer(name);*/
     }
