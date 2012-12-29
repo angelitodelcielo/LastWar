@@ -1,3 +1,6 @@
+#ifndef CARD_H
+#define CARD_H
+
 typedef struct card{
     char *name;
     int life;
@@ -7,4 +10,6 @@ typedef struct card{
 
 CARD* getCard (CARDLIST *cardlist, int i);
 CARD* removeCard (CARDLIST *cardlist, int i);
-void printCardList (CARDLIST* cardlist)
+void printCardList (CARDLIST* cardlist);
+
+#endif

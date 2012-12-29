@@ -1,3 +1,6 @@
+#ifndef NODE_H
+#define NODE_H
+
 typedef struct node
 {
     CARD *card;
@@ -5,3 +8,5 @@ typedef struct node
 }NODE;
 
 NODE* (createNode (CARD *card, NODE *next);
+
+#endif
