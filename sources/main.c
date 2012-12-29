@@ -23,24 +23,14 @@ Init Game
 #######################
 */
     char menu = '0'; 
+ 
     do{
-        char conf = '0';
 
         menu = displayMenu();
 
         if(menu == LAN){
 
-            do{
-                printf("Game mode:\n");
-                printf("[1]. Client\n");
-                printf("[2]. Server\n\n");
-
-                scanf(" %c",&conf);
-                fflush(stdin);
-
-            }while(conf!='1' &&
-                   conf!='2');
-
+            configServer();
             initPlayer();
         }    
         else if(menu == LOCAL){

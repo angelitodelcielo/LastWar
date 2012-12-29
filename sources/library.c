@@ -1,4 +1,5 @@
 char displayMenu(){
+
     char answer = '0';
     do{
         printf("\nWelcome to the Last War Game\n"); 
@@ -17,6 +18,7 @@ char displayMenu(){
 }
 
 void initPlayer(){
+
     int nbplayer = 1;
     char name[100];
     int i;
@@ -32,7 +34,21 @@ void initPlayer(){
     }
 }
 
+void configServer(){
 
+    char conf = '0';
+    do{
+        printf("Game mode:\n");
+        printf("[1]. Client\n");
+        printf("[2]. Server\n\n");
+
+        scanf(" %c",&conf);
+        fflush(stdin);
+
+    }while(conf!='1' &&
+            conf!='2');
+
+}
 // Supprime les caractères blancs (espace, tabulation, saut de ligne...) qui sont devant et derrière la chaine str
 // Adapted from: http://stackoverflow.com/questions/122616/how-do-i-trim-leading-trailing-whitespace-in-a-standard-way
 char *trim (char *str){
