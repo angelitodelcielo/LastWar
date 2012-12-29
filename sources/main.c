@@ -1,3 +1,8 @@
+#define BUFFER_SIZE 80
+#define LOCAL '1'
+#define LAN   '2'
+#define AIDE  '3'
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,10 +16,6 @@
 #include "/usr/include/mysql/my_global.h"
 #include "/usr/include/mysql/mysql.h"
 
-#define BUFFER_SIZE 80
-#define LOCAL '1'
-#define LAN   '2'
-#define AIDE  '3'
 
 int main(){
 
