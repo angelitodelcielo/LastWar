@@ -7,10 +7,6 @@ typedef struct node
     struct node *next;
 }NODE;
 
-<<<<<<< HEAD
-NODE* (createNode (CARD *card, NODE *next);
+NODE* (createNode (CARD *card, NODE *next));
 
 #endif
-=======
-NODE* (createNode (CARD *card, NODE *next));
->>>>>>> a0595455282e5c5e45957f82dbfdc99dfc6fced8
